@@ -6,8 +6,6 @@ use ic_common::ic_api::ic_caller;
 use crate::ic_api::init_test;
 use crate::ic_api::test_wrapper::set_caller;
 
-use super::*;
-
 #[rstest]
 fn test_current_api_caller(_init_test: ()) {
     let caller = ic_caller();

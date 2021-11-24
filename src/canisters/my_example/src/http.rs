@@ -1,7 +1,6 @@
 use candid::{candid_method, Principal};
 use ic_cdk_macros::*;
 use log::info;
-use url::Url;
 
 use ic_common::http::{HttpRequest, HttpResponse};
 

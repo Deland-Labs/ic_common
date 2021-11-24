@@ -1,6 +1,4 @@
-use std::collections::HashSet;
-
-use candid::{CandidType, Deserialize, Principal};
+use candid::{CandidType, Deserialize};
 
 use crate::constants::{
     PAGE_INPUT_MAX_LIMIT, PAGE_INPUT_MAX_OFFSET, PAGE_INPUT_MIN_LIMIT, PAGE_INPUT_MIN_OFFSET,

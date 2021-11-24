@@ -1,10 +1,5 @@
-use std::collections::HashMap;
-use std::sync::Arc;
-
 use candid::Principal;
 use log::{debug, info};
-
-use ic_common::errors::ServiceResult;
 
 use crate::errors::{UserServiceError, UserServiceResult};
 use crate::models::*;

@@ -1,5 +1,5 @@
 use ic_cdk::api;
-use log::{LevelFilter, Metadata, Record, SetLoggerError};
+use log::{LevelFilter, Metadata, Record};
 
 pub struct ICLogger;
 
