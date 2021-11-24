@@ -1,0 +1,8 @@
+type ErrorInfo = record { code : nat32; message : text };
+type Result = variant { Ok; Err : ErrorInfo };
+type Result_1 = variant { Ok : User; Err : ErrorInfo };
+type User = record { id : principal; name : text; email : text };
+service : {
+  add_user : (principal, text, text) -> (Result);
+  get_user_by_id : (principal) -> (Result_1) query;
+}

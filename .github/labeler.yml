@@ -1,0 +1,5 @@
+# Configuration for labeler - https://github.com/actions/labeler
+
+🧾 ic_common: src/ic_common/**/*
+⛳ ic_test_common: src/ic_test_common/**/*
+Actions: .github/workflows/**/*
