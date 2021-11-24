@@ -25,6 +25,7 @@ jobs:
         run: |
           cd $GITHUB_WORKSPACE/src
           chmod a+x ./sh_start.sh
+          sleep 5s
           chmod a+x ./sh_deploy.sh
           chmod a+x ./sh_test.sh
           ./sh_start.sh
