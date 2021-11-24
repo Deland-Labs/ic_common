@@ -1,0 +1,21 @@
+{
+  "canisters": {
+    "my_example": {
+      "type": "rust",
+      "package": "my_example",
+      "candid": "canisters/my_example/src/my_example.did"
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}

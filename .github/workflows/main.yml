@@ -1,0 +1,36 @@
+name: build
+
+on:
+  push:
+    branches:
+      - main
+
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      ACTIONS_ALLOW_UNSECURE_COMMANDS: true
+    container: 
+      image: docker.io/kentsday/dfx_rust:bullseye
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: install canister
+        run: |
+          cd $GITHUB_WORKSPACE/src
+          chmod a+x ./sh_start.sh
+          chmod a+x ./sh_deploy.sh
+          chmod a+x ./sh_test.sh
+          ./sh_start.sh
+          ./sh_test.sh
+          dfx stop
+      - name:  unit test
+        run: |
+          cd $GITHUB_WORKSPACE/src
+          cargo test

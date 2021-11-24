@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "ic_common",
+    "ic_test_common",
+    "canisters/my_example"
+]
