@@ -21,13 +21,15 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      # - name: install canister
-      #   run: |
-      #     cd $GITHUB_WORKSPACE/src
-      #     chmod a+x ./sh_start.sh
-      #     chmod a+x ./sh_deploy.sh
-      #     ./sh_start.sh
-      #     dfx stop
+      - name: install canister
+        run: |
+          cd $GITHUB_WORKSPACE/src
+          chmod a+x ./sh_start.sh
+          chmod a+x ./sh_deploy.sh
+          chmod a+x ./sh_test.sh
+          ./sh_start.sh
+          ./sh_test.sh
+          dfx stop
       - name:  unit test
         run: |
           cd $GITHUB_WORKSPACE/src
