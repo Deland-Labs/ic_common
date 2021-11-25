@@ -13,8 +13,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      ACTIONS_ALLOW_UNSECURE_COMMANDS: true
     container: 
       image: docker.io/kentsday/dfx_rust:bullseye
     steps:
@@ -24,6 +22,7 @@ jobs:
       - name: install canister
         run: |
           cd $GITHUB_WORKSPACE/src
+          dfx --help
           chmod a+x ./sh_start.sh
           chmod a+x ./sh_deploy.sh
           chmod a+x ./sh_test.sh
