@@ -22,6 +22,7 @@ jobs:
       - name: install canister
         run: |
           cd $GITHUB_WORKSPACE/src
+          dfx --help
           chmod a+x ./sh_start.sh
           chmod a+x ./sh_deploy.sh
           chmod a+x ./sh_test.sh
