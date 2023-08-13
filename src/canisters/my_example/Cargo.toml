@@ -22,5 +22,5 @@ url = "2.2.2"
 [dev-dependencies]
 env_logger = "0.9.0"
 ic_test_common = { path = "../../ic_test_common" }
-rstest = "0.12.0"
+rstest = "0.18.2"
 async-std = { version = "1.10", features = ["attributes"] }
