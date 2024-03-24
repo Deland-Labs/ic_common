@@ -14,5 +14,5 @@ serde_bytes = "0.11"
 ic_common = { path = "../ic_common" }
 log = "0.4"
 env_logger = "0.9.0"
-async-trait = "0.1.52"
+async-trait = "0.1.79"
 rstest = "0.12.0"
